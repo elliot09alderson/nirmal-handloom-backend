@@ -1,0 +1,182 @@
+[
+    {
+        "name": "Banarasi Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Kanjivaram Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Patola Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Paithani Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Assam Silk (Muga / Eri)",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Mysore Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Uppada Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Gadwal Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Tussar Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Raw Silk",
+        "category": "Silk Sarees"
+    },
+    {
+        "name": "Pure Cotton",
+        "category": "Cotton Sarees"
+    },
+    {
+        "name": "Khadi Cotton",
+        "category": "Cotton Sarees"
+    },
+    {
+        "name": "Chanderi Cotton",
+        "category": "Cotton Sarees"
+    },
+    {
+        "name": "Kota Cotton",
+        "category": "Cotton Sarees"
+    },
+    {
+        "name": "Bengal Cotton",
+        "category": "Cotton Sarees"
+    },
+    {
+        "name": "Handloom Cotton",
+        "category": "Cotton Sarees"
+    },
+    {
+        "name": "Printed Georgette",
+        "category": "Georgette Sarees"
+    },
+    {
+        "name": "Embroidered Georgette",
+        "category": "Georgette Sarees"
+    },
+    {
+        "name": "Designer Georgette",
+        "category": "Georgette Sarees"
+    },
+    {
+        "name": "Printed Chiffon",
+        "category": "Chiffon Sarees"
+    },
+    {
+        "name": "Designer Chiffon",
+        "category": "Chiffon Sarees"
+    },
+    {
+        "name": "Embellished Chiffon",
+        "category": "Chiffon Sarees"
+    },
+    {
+        "name": "Pure Organza",
+        "category": "Organza Sarees"
+    },
+    {
+        "name": "Printed Organza",
+        "category": "Organza Sarees"
+    },
+    {
+        "name": "Embroidered Organza",
+        "category": "Organza Sarees"
+    },
+    {
+        "name": "Katan Banarasi",
+        "category": "Banarasi Sarees"
+    },
+    {
+        "name": "Organza Banarasi",
+        "category": "Banarasi Sarees"
+    },
+    {
+        "name": "Georgette Banarasi",
+        "category": "Banarasi Sarees"
+    },
+    {
+        "name": "Soft Silk Banarasi",
+        "category": "Banarasi Sarees"
+    },
+    {
+        "name": "Jamdani",
+        "category": "Handloom Sarees"
+    },
+    {
+        "name": "Ikat",
+        "category": "Handloom Sarees"
+    },
+    {
+        "name": "Bhagalpuri",
+        "category": "Handloom Sarees"
+    },
+    {
+        "name": "Maheshwari",
+        "category": "Handloom Sarees"
+    },
+    {
+        "name": "Sambalpuri",
+        "category": "Handloom Sarees"
+    },
+    {
+        "name": "Digital Print",
+        "category": "Printed Sarees"
+    },
+    {
+        "name": "Block Print",
+        "category": "Printed Sarees"
+    },
+    {
+        "name": "Floral Print",
+        "category": "Printed Sarees"
+    },
+    {
+        "name": "Kalamkari Print",
+        "category": "Printed Sarees"
+    },
+    {
+        "name": "Sequin Sarees",
+        "category": "Party Wear Sarees"
+    },
+    {
+        "name": "Stone Work Sarees",
+        "category": "Party Wear Sarees"
+    },
+    {
+        "name": "Heavy Work Sarees",
+        "category": "Party Wear Sarees"
+    },
+    {
+        "name": "Designer Party Sarees",
+        "category": "Party Wear Sarees"
+    },
+    {
+        "name": "Embroidered Net",
+        "category": "Net Sarees"
+    },
+    {
+        "name": "Stone Work Net",
+        "category": "Net Sarees"
+    },
+    {
+        "name": "Designer Net",
+        "category": "Net Sarees"
+    }
+]

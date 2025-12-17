@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Silk Sarees",
+        "description": "Elegant and traditional Silk Sarees"
+    },
+    {
+        "name": "Cotton Sarees",
+        "description": "Comfortable and breathable Cotton Sarees"
+    },
+    {
+        "name": "Georgette Sarees",
+        "description": "Flowy and lightweight Georgette Sarees"
+    },
+    {
+        "name": "Chiffon Sarees",
+        "description": "Sheer and elegant Chiffon Sarees"
+    },
+    {
+        "name": "Organza Sarees",
+        "description": "Crisp and translucent Organza Sarees"
+    },
+    {
+        "name": "Banarasi Sarees",
+        "description": "Classic woven Banarasi Sarees"
+    },
+    {
+        "name": "Handloom Sarees",
+        "description": "Authentic Handloom Sarees"
+    },
+    {
+        "name": "Printed Sarees",
+        "description": "Vibrant and colorful Printed Sarees"
+    },
+    {
+        "name": "Party Wear Sarees",
+        "description": "Glamorous sarees for special occasions"
+    },
+    {
+        "name": "Net Sarees",
+        "description": "Delicate and stylish Net Sarees"
+    }
+]
