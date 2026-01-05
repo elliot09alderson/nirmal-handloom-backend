@@ -96,8 +96,15 @@ const getMyOrders = async (req, res) => {
 // @access  Private/Admin
 const getOrders = async (req, res) => {
     try {
-        const orders = await Order.find({}).populate('user', 'id name');
-        res.json(orders);
+        const pageSize = Number(req.query.limit) || 10;
+        const page = Number(req.query.page) || 1;
+
+        const count = await Order.countDocuments({});
+        const orders = await Order.find({}).populate('user', 'id name')
+            .limit(pageSize)
+            .skip(pageSize * (page - 1));
+
+        res.json({ orders, page, pages: Math.ceil(count / pageSize), total: count });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -131,22 +138,46 @@ const updateOrderToDelivered = async (req, res) => {
 const createRazorpayOrder = async (req, res) => {
     const { amount } = req.body;
 
-    const instance = new Razorpay({
-        key_id: process.env.RAZORPAY_KEY_ID,
-        key_secret: process.env.RAZORPAY_KEY_SECRET,
-    });
+    // Validate amount
+    if (!amount || amount <= 0) {
+        return res.status(400).json({ message: 'Invalid amount' });
+    }
 
-    const options = {
-        amount: amount * 100, // amount in the smallest currency unit (paise)
-        currency: "INR",
-        receipt: `receipt_${Date.now()}`,
-    };
+    // Validate Razorpay credentials
+    const keyId = process.env.RAZORPAY_KEY_ID;
+    const keySecret = process.env.RAZORPAY_KEY_SECRET;
+
+    if (!keyId || !keySecret) {
+        console.error('Razorpay credentials not configured');
+        return res.status(500).json({ 
+            message: 'Payment gateway not configured. Please contact support.' 
+        });
+    }
 
     try {
+        const instance = new Razorpay({
+            key_id: keyId,
+            key_secret: keySecret,
+        });
+
+        const options = {
+            amount: Math.round(amount * 100), // amount in the smallest currency unit (paise)
+            currency: "INR",
+            receipt: `receipt_${Date.now()}`,
+        };
+
         const order = await instance.orders.create(options);
+        
+        if (!order) {
+            throw new Error('Failed to create Razorpay order');
+        }
+
         res.json(order);
     } catch (error) {
-        res.status(500).send(error);
+        console.error('Razorpay order creation error:', error);
+        res.status(500).json({ 
+            message: error.error?.description || error.message || 'Failed to create payment order'
+        });
     }
 };
 

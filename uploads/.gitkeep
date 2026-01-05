@@ -1,0 +1,2 @@
+# This file ensures the uploads directory is tracked by git
+# In production, use Cloudinary for file storage

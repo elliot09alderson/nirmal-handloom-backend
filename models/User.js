@@ -37,7 +37,9 @@ const userSchema = new mongoose.Schema({
         zip: String,
         country: { type: String, default: 'India' },
         phone: String,
-        isDefault: { type: Boolean, default: false }
+        isDefault: { type: Boolean, default: false },
+        latitude: { type: Number },
+        longitude: { type: Number }
     }],
     wishlist: [{
         type: mongoose.Schema.Types.ObjectId,
