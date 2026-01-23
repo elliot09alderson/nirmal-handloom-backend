@@ -16,7 +16,7 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads'))); // Serve 
 // CORS Configuration - Dynamic origins for development and production
 const allowedOrigins = process.env.ALLOWED_ORIGINS 
     ? process.env.ALLOWED_ORIGINS.split(',') 
-    : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174'];
+    : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://nirmalhandloom.com', 'https://www.nirmalhandloom.com'];
 
 app.use(cors({
     origin: function (origin, callback) {
