@@ -10,12 +10,14 @@ router.route('/')
     .get(getProducts)
     .post(protect, admin, upload.array('images', 10), createProduct);
 
+
+router.get('/top', getTopProducts);
+
 router.route('/:id')
     .get(getProductById)
     .put(protect, admin, upload.array('images', 10), updateProduct)
     .delete(protect, admin, deleteProduct);
 
 router.route('/:id/reviews').post(protect, createProductReview);
-router.get('/top', getTopProducts);
 
 module.exports = router;
