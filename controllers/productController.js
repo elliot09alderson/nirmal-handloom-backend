@@ -211,7 +211,18 @@ const getProductById = async (req, res) => {
         const product = await Product.findById(req.params.id).populate('category').populate('subcategory');
 
         if (product) {
-            res.json(product);
+            // Find similar products based on category
+            let similarProducts = [];
+            if (product.category) {
+                const categoryId = product.category._id || product.category;
+                similarProducts = await Product.find({ 
+                    category: categoryId, 
+                    _id: { $ne: product._id },
+                    isActive: true
+                }).limit(4);
+            }
+            
+            res.json({ product, similarProducts });
         } else {
             res.status(404).json({ message: 'Product not found' });
         }
